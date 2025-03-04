@@ -1,0 +1,27 @@
+.email {
+    font-family: Consolas, Monaco, Charcoal, Chicago, sans-serif;
+}
+
+span.emailobfuscate {
+    display: none;
+}
+
+/* Don't display authors, affiliations and date in distill posts */
+/* d-byline {
+    display: none !important;
+} */
+/* Full-width cards in projects */
+/* .grid-sizer,
+  .grid-item {
+    width: 100% !important;    
+} */
+
+/* .projects h2.category {
+    color: var(--global-text-color-light);
+    text-align: unset;
+    padding-bottom: 0.5rem;
+} */
+
+a>strong {
+    color: var(--global-theme-color) !important;
+}
