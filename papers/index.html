@@ -96,66 +96,199 @@
   <article>
     <h1 id="publications-and-preprints">Publications and preprints</h1>
 
+<!-- ============================================================
+     Copy the <style> block into your site's CSS (or keep it inline)
+     and the <section class="pubs"> block where your list was.
+     All colors derive from currentColor, so light/dark themes work.
+     ============================================================ -->
+<style>
+  .pubs {
+    --pub-accent: #2c5d8f;          /* change to your site's link color */
+    --pub-muted: 0.68;              /* opacity of secondary text */
+    --pub-rule: color-mix(in srgb, currentColor 14%, transparent);
+    max-width: 46rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    .pubs { --pub-accent: #8fb8e3; }
+  }
 
+  .pubs h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 2.25rem 0 0.25rem;
+  }
+  .pubs h3:first-child { margin-top: 0; }
 
-<ul>
+  .pub-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .pub {
+    padding: 0.95rem 0;
+    border-bottom: 1px solid var(--pub-rule);
+  }
+  .pub:last-child { border-bottom: none; }
 
-<li>
-<a href="https://arxiv.org/abs/2607.04392" rel="external nofollow noopener" target="_blank"><strong>Adapted Law Invariance and Time-Consistent Dynamic Risk Measures</strong></a><br>
-Mathias Beiglböck, Silvana M. Pesenti, Maxime Sylvestre. <br>
-<em>arXiv:2607.04392,</em> 2026.
-</li>
+  .pub-title {
+    display: inline;
+    font-weight: 550;
+    line-height: 1.4;
+    color: inherit;
+    text-decoration: none;
+  }
+  .pub-title:hover,
+  .pub-title:focus-visible {
+    color: var(--pub-accent);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
 
-<li>
-<a href="https://arxiv.org/abs/2511.16211" rel="external nofollow noopener" target="_blank"><strong>Weak optimal transport with moment constraints: constraint qualification, dual attainment and entropic regularization</strong></a><br>
-Guillaume Carlier, Hugo Malamut, Maxime Sylvestre. <br>
-<em>arXiv:2511.16211,</em> 2025.
-</li>
+  .pub-authors {
+    margin-top: 0.3rem;
+    font-size: 0.93rem;
+    opacity: var(--pub-muted);
+  }
+  .pub-authors .me {
+    font-weight: 600;
+    opacity: 1;
+  }
 
-<li>
-<a href="https://arxiv.org/abs/2506.18884" rel="external nofollow noopener" target="_blank"><strong>A synthetic approach to comparison principles for variational problems, with applications to optimal transport</strong></a><br>
-Flavien Léger, Maxime Sylvestre. <br>
-<em>arXiv:2506.18884,</em> 2025.
-[<a href="/assets/slides/varcomp.pdf">Slides</a>]
-</li>
+  .pub-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 0.9rem;
+    margin-top: 0.4rem;
+    font-size: 0.88rem;
+  }
+  .pub-venue {
+    font-style: italic;
+    opacity: var(--pub-muted);
+  }
+  .pub-links {
+    display: inline-flex;
+    gap: 0.4rem;
+  }
+  .pub-links a {
+    font-size: 0.78rem;
+    padding: 0.08rem 0.55rem;
+    border: 1px solid color-mix(in srgb, var(--pub-accent) 45%, transparent);
+    border-radius: 999px;
+    color: var(--pub-accent);
+    text-decoration: none;
+    line-height: 1.5;
+  }
+  .pub-links a:hover,
+  .pub-links a:focus-visible {
+    background: color-mix(in srgb, var(--pub-accent) 12%, transparent);
+  }
+</style>
 
-<li>
-<a href="https://arxiv.org/abs/2501.11382" rel="external nofollow noopener" target="_blank"><strong>Global Regularity Estimates for Optimal Transport via Entropic Regularisation</strong></a><br>
-Nathael Gozlan, Maxime Sylvestre. <br>
-<em>arxiv:2501.11382,</em> 2025.
-[<a href="/assets/slides/synthOTreg.pdf">Slides</a>]
-</li>
+<section class="pubs">
 
-<li>
-<a href="https://arxiv.org/abs/2502.21170" rel="external nofollow noopener" target="_blank"><strong>On a class of adversarial classification problems which admit a continuous solution</strong></a><br>
-Guillaume Carlier, Maxime Sylvestre. <br>
-<em>arxiv:2502.21170, </em> 2025.
+  <h3>Published</h3>
+  <ul class="pub-list">
 
-</li>
+    <li class="pub">
+      <a class="pub-title" href="https://arxiv.org/abs/2402.08344" rel="external nofollow noopener" target="_blank">Implicit bias in noisy-SGD: with applications to differentially private training</a>
+      <div class="pub-authors">Tom Sander, <span class="me">Maxime Sylvestre</span>, Alain Durmus</div>
+      <div class="pub-meta">
+        <span class="pub-venue">AISTATS, 2024</span>
+        <span class="pub-links">
+          <a href="https://arxiv.org/abs/2402.08344" rel="external nofollow noopener" target="_blank">arXiv</a>
+        </span>
+      </div>
+    </li>
 
-<li>
-<a href="https://arxiv.org/abs/2402.08344" rel="external nofollow noopener" target="_blank"><strong>Implicit Bias in Noisy-SGD: With Applications to Differentially Private Training</strong></a><br>
-Tom Sander, Maxime Sylvestre, Alain Durmus. <br>
-<em>AISTATS, </em> 2024.
+    <li class="pub">
+      <a class="pub-title" href="https://arxiv.org/abs/2306.06940" rel="external nofollow noopener" target="_blank">Convergence rates of the regularized optimal transport: disentangling suboptimality and entropy</a>
+      <div class="pub-authors">Hugo Malamut, <span class="me">Maxime Sylvestre</span></div>
+      <div class="pub-meta">
+        <span class="pub-venue">SIAM Journal on Mathematical Analysis, 2023</span>
+        <span class="pub-links">
+          <a href="https://arxiv.org/abs/2306.06940" rel="external nofollow noopener" target="_blank">arXiv</a>
+          <a href="/assets/slides/disentangling.pdf">Slides</a>
+        </span>
+      </div>
+    </li>
 
-</li>
+  </ul>
 
-<li>
-<a href="https://arxiv.org/abs/2306.06940" rel="external nofollow noopener" target="_blank"><strong>Convergence Rates of the Regularized Optimal Transport : Disentangling Suboptimality and Entropy</strong></a><br>
-Hugo Malamut, Maxime Sylvestre.<br>
-<em>SIAM Journal on Mathematical Analysis,</em> 2023.
-[<a href="/assets/slides/disentangling.pdf">Slides</a>]
-</li>
-  <li>
-<a href="https://arxiv.org/abs/2304.12171" rel="external nofollow noopener" target="_blank"><strong>Monotone comparative statics for submodular functions, with an application to aggregated deferred acceptance</strong></a> <br>
-Alfred Galichon, Yu-Wei Hsieh, Maxime Sylvestre. <br>
-<em>arxiv:2304.12171</em>, 2023.
-[<a href="/assets/slides/mcs.pdf">Slides</a>]
-</li>
-</ul>
+  <h3>Preprints</h3>
+  <ul class="pub-list">
 
+    <li class="pub">
+      <a class="pub-title" href="https://arxiv.org/abs/2607.04392" rel="external nofollow noopener" target="_blank">Adapted law invariance and time-consistent dynamic risk measures</a>
+      <div class="pub-authors">Mathias Beiglböck, Silvana M. Pesenti, <span class="me">Maxime Sylvestre</span></div>
+      <div class="pub-meta">
+        <span class="pub-venue">arXiv:2607.04392, 2026</span>
+        <span class="pub-links">
+          <a href="https://arxiv.org/abs/2607.04392" rel="external nofollow noopener" target="_blank">arXiv</a>
+        </span>
+      </div>
+    </li>
 
+    <li class="pub">
+      <a class="pub-title" href="https://arxiv.org/abs/2511.16211" rel="external nofollow noopener" target="_blank">Weak optimal transport with moment constraints: constraint qualification, dual attainment and entropic regularization</a>
+      <div class="pub-authors">Guillaume Carlier, Hugo Malamut, <span class="me">Maxime Sylvestre</span></div>
+      <div class="pub-meta">
+        <span class="pub-venue">arXiv:2511.16211, 2025</span>
+        <span class="pub-links">
+          <a href="https://arxiv.org/abs/2511.16211" rel="external nofollow noopener" target="_blank">arXiv</a>
+        </span>
+      </div>
+    </li>
 
+    <li class="pub">
+      <a class="pub-title" href="https://arxiv.org/abs/2506.18884" rel="external nofollow noopener" target="_blank">A synthetic approach to comparison principles for variational problems, with applications to optimal transport</a>
+      <div class="pub-authors">Flavien Léger, <span class="me">Maxime Sylvestre</span></div>
+      <div class="pub-meta">
+        <span class="pub-venue">arXiv:2506.18884, 2025</span>
+        <span class="pub-links">
+          <a href="https://arxiv.org/abs/2506.18884" rel="external nofollow noopener" target="_blank">arXiv</a>
+          <a href="/assets/slides/varcomp.pdf">Slides</a>
+        </span>
+      </div>
+    </li>
+
+    <li class="pub">
+      <a class="pub-title" href="https://arxiv.org/abs/2502.21170" rel="external nofollow noopener" target="_blank">On a class of adversarial classification problems which admit a continuous solution</a>
+      <div class="pub-authors">Guillaume Carlier, <span class="me">Maxime Sylvestre</span></div>
+      <div class="pub-meta">
+        <span class="pub-venue">arXiv:2502.21170, 2025</span>
+        <span class="pub-links">
+          <a href="https://arxiv.org/abs/2502.21170" rel="external nofollow noopener" target="_blank">arXiv</a>
+        </span>
+      </div>
+    </li>
+
+    <li class="pub">
+      <a class="pub-title" href="https://arxiv.org/abs/2501.11382" rel="external nofollow noopener" target="_blank">Global regularity estimates for optimal transport via entropic regularisation</a>
+      <div class="pub-authors">Nathael Gozlan, <span class="me">Maxime Sylvestre</span></div>
+      <div class="pub-meta">
+        <span class="pub-venue">arXiv:2501.11382, 2025</span>
+        <span class="pub-links">
+          <a href="https://arxiv.org/abs/2501.11382" rel="external nofollow noopener" target="_blank">arXiv</a>
+          <a href="/assets/slides/synthOTreg.pdf">Slides</a>
+        </span>
+      </div>
+    </li>
+
+    <li class="pub">
+      <a class="pub-title" href="https://arxiv.org/abs/2304.12171" rel="external nofollow noopener" target="_blank">Monotone comparative statics for submodular functions, with an application to aggregated deferred acceptance</a>
+      <div class="pub-authors">Alfred Galichon, Yu-Wei Hsieh, <span class="me">Maxime Sylvestre</span></div>
+      <div class="pub-meta">
+        <span class="pub-venue">arXiv:2304.12171, 2023</span>
+        <span class="pub-links">
+          <a href="https://arxiv.org/abs/2304.12171" rel="external nofollow noopener" target="_blank">arXiv</a>
+          <a href="/assets/slides/mcs.pdf">Slides</a>
+        </span>
+      </div>
+    </li>
+
+  </ul>
+</section>
 
 
   </article>
